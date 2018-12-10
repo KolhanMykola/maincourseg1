@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<links>
+  <homeWork id="1">
+    <course>1</course>
+  </homeWork>
+  <homeWork id="2">
+    <course>2</course>
+  </homeWork>
+</links>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<links>
+  <student id="1">
+    <homeWorkMark>1</homeWorkMark>
+  </student>
+  <student id="1">
+    <homeWorkMark>3</homeWorkMark>
+  </student>
+  <student id="2">
+    <homeWorkMark>2</homeWorkMark>
+  </student>
+  <student id="2">
+    <homeWorkMark>4</homeWorkMark>
+  </student>
+</links>

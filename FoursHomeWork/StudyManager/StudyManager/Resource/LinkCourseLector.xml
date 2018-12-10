@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<links>
+  <lector id="1">
+    <course>1</course>
+  </lector>
+  <lector id="1">
+    <course>2</course>
+  </lector>
+</links>

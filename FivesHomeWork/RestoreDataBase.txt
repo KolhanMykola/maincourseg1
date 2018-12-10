@@ -1,0 +1,8 @@
+RESTORE FILELISTONLY
+FROM DISK = 'E:\SigmaCoursesNew\maincourseg1\FivesHomeWork\IntroductionADO\db.bak'
+
+RESTORE DATABASE DemoAdo
+FROM DISK = 'E:\SigmaCoursesNew\maincourseg1\FivesHomeWork\IntroductionADO\db.bak'
+WITH MOVE 'BaseCourse' TO 'E:\SigmaCoursesNew\maincourseg1\FivesHomeWork\IntroductionADO\IntroductionADO\Manager.mdf',
+MOVE 'BaseCourse_log' TO 'E:\SigmaCoursesNew\maincourseg1\FivesHomeWork\IntroductionADO\IntroductionADO\Manager.ldf',
+REPLACE;

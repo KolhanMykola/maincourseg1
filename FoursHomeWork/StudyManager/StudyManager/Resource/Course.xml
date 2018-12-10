@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<courses>
+  <course id="1">
+    <name>c# main course</name>
+    <beginDate>13.11.2018</beginDate>
+    <endDate>28.12.2018</endDate>
+    <pasMark>75</pasMark>
+  </course>
+  <course id="2">
+    <name>c# base course</name>
+    <beginDate>20.09.2018</beginDate>
+    <endDate>25.10.2018</endDate>
+    <pasMark>80</pasMark>
+  </course>
+</courses>

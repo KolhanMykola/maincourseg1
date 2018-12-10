@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<students>
+  <student id="1">
+    <firstName>Mykola</firstName>
+    <lastName>Kolhan</lastName>
+    <phoneNumber>380673457924</phoneNumber>
+    <email>KolhanMykola@gmail.com</email>
+    <git>KolhanMykola</git>
+  </student>
+  <student id="2">
+    <firstName>Petro</firstName>
+    <lastName>Koval</lastName>
+    <phoneNumber>380965488624</phoneNumber>
+    <email>PetroKoval@gmail.com</email>
+    <git>PetroKoval</git>
+  </student>
+</students>

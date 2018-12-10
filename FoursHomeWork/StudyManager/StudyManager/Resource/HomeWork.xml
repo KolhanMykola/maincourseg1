@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<homeWorks>
+  <homeWork id="1">
+    <name>Types</name>
+    <description>Value and Reference types</description>
+    <date>29.09.2018</date>
+    <number>1</number>
+  </homeWork>
+  <homeWork id="2">
+    <name>StudyManager</name>
+    <description>student registration</description>
+    <date>20.12.2018</date>
+    <number>3</number>
+  </homeWork>
+</homeWorks>

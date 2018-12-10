@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<homeWorkMarks>
+  <homeWorkMark id="1">
+    <date>29.09.2018</date>
+    <isDone>done</isDone>
+  </homeWorkMark>
+  <homeWorkMark id="2">
+    <date>29.09.2018</date>
+    <isDone>done</isDone>
+  </homeWorkMark>
+  <homeWorkMark id="3">
+    <date>20.12.2018</date>
+    <isDone>done</isDone>
+  </homeWorkMark>
+  <homeWorkMark id="4">
+    <date>20.12.2018</date>
+    <isDone>not done</isDone>
+  </homeWorkMark>
+</homeWorkMarks>
