@@ -99,8 +99,6 @@ ipch/
 *.VC.db
 *.VC.VC.opendb
 
-$ git config --global core.safecrlf warn
-
 # Visual Studio profiler
 *.psess
 *.vsp
