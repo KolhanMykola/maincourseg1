@@ -1,0 +1,32 @@
+﻿ 
+@model IEnumerable<Api.Data.HomeTask>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomeTask</title>
+</head>
+<body>
+    <form asp-action="@ViewBag.Action">
+        @foreach (var homeTask in Model)
+        {
+        <div>
+            <input asp-for="@homeTask.Date" />
+            <input asp-for="@homeTask.Title" />
+            <input asp-for="@homeTask.Description" />
+            <input asp-for="@homeTask.Number" />
+            <input type="hidden" asp-for="@homeTask.Id" />
+            <input type="submit" value="submit" />
+            @Html.ActionLink("delete", "Delete", "HomeTask", new { id = @homeTask.Id })
+        </div>
+        }
+    </form>
+    <div>
+        
+     </div>
+</body>
+</html>

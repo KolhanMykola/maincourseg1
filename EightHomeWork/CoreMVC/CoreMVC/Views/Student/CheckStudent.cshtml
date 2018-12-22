@@ -1,0 +1,35 @@
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<CoreMVC.ViewModel.CheckHomework>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CheckStudent</title>
+</head>
+<body>
+    <p> @ViewBag.studentName HomeTaskAssessment</p>
+    <div>
+
+        @foreach (var course in Model)
+        {
+            @course.courseName
+            @foreach (var mark in course.courseChecks)
+            {
+                <form asp-action="Assign">
+                    <p>hometaskName:</p>
+                    <input type="text" name="name" value="@mark.hometaskName" readonly />
+                    <p>hometaskMark:</p>
+                    @Html.CheckBox("mark", mark.mark)
+                    <input type="hidden" name="id" value="@mark.HomeTaskAssessmentId" />
+                    <input type="submit" value="submit" />
+                </form>
+            }
+        }
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿
+@model IEnumerable<Api.Data.Course>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Courses List</title>
+</head>
+<body>
+    @Html.ActionLink("Create", "Create")
+    <div>
+        @foreach (var course in Model)
+        {
+            <div>
+                <p>@course.Name</p>
+                <p>@course.StartDate</p>
+                <p>@Html.ActionLink("edit Course", "Update", new { id = course.Id })</p>
+                <p>@Html.ActionLink("delete Course", "Delete", new { id = course.Id })</p>
+
+                <p>@Html.ActionLink("update/delete HomeTask", "UpdateHomeTask", "HomeTask", new { id = course.Id })</p>
+                @Html.ActionLink("create HomeTask", "Create", "HomeTask", new { id = course.Id })
+
+            </div>
+            <p>@Html.ActionLink("assignStudentToCourse   ", "Assign", "Assignment", new { id = course.Id })</p>
+
+            @Html.ActionLink(" assignLectureToCourse", "Assign", "AssignLectureToCourse", new { id = course.Id })
+        }
+    </div>
+</body>
+</html>

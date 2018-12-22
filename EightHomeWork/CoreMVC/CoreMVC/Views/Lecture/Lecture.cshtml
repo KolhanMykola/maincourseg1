@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<Api.Data.Lecturer>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lecture List</title>
+</head>
+<body>
+    @Html.ActionLink("Create", "Create")
+    <div>
+        @foreach (var lecture in Model)
+        {
+            <div>
+                <p>@lecture.Name</p>
+                <p>@lecture.BirthDate</p>
+                <p>@Html.ActionLink("edit", "UpdateLecture", new { id = lecture.Id })</p>
+                <p>@Html.ActionLink("delete", "Delete", new { id = lecture.Id })</p>
+            </div>
+            <p>@Html.ActionLink("assign", "Assign", "Assignment", new { id = lecture.Id })</p>
+        }
+    </div>
+</body>
+</html>

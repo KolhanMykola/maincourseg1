@@ -1,0 +1,31 @@
+﻿@using CoreMVC.ViewModel
+@model CoreMVC.ViewModel.AssignStudentsViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Assign</title>
+</head>
+<body>
+    <div>
+        <p>@Model.CourseName</p>
+        <p>@Model.StartDate</p>
+        <p>@Model.StartDate</p>
+        <form asp-action="Assign" >
+            @Html.HiddenFor(m=>Model.Id)
+            @for (int i = 0; i < Model.Students.Count; i++)
+            {
+                @Model.Students[i].Name
+                @Html.CheckBoxFor(m=>Model.Students[i].IsChecked)
+                @Html.HiddenFor(m=>Model.Students[i].Id)
+                 
+            }
+
+            <input type="submit" value="Go" />
+        </form>
+    </div>
+</body>
+</html>
