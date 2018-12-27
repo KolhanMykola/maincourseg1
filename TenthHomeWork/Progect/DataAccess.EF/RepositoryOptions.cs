@@ -1,1 +1,7 @@
-﻿namespace DataAccess.EF{    public class RepositoryOptions    {        public string ConnectionString { get; set; }     }}
+﻿namespace DataAccess.EF
+{
+    public class RepositoryOptions
+    {
+        public string ConnectionString { get; set; } 
+    }
+}
