@@ -77,9 +77,9 @@ namespace Final.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateHomeTaskAssessments( [FromForm] HomeTaskAssessment homeTaskAssessment) 
+        public IActionResult UpdateHomeTaskAssessments(  IEnumerable<HomeTaskAssessment> homeTaskAssessment) 
         {       
-            repository.UpdateHomeTaskAssessment(homeTaskAssessment);
+            repository.UpdateHomeTaskAssessments(homeTaskAssessment.ToList());
             return RedirectToAction("Student");
         }
     }

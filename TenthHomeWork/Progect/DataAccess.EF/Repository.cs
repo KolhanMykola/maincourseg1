@@ -16,7 +16,10 @@ namespace DataAccess.EF
         public Repository(IOptions<RepositoryOptions> options)
         {
             context = new UniversityContext(options);
+            context.Database.EnsureCreated();
         }
+
+
 
         public Course CreateCourse(Course course)
         {
@@ -120,12 +123,12 @@ namespace DataAccess.EF
         public void DeleteCourse(int courseId)
         {
             var st = GetCourse(courseId);
-            var del = context.LecturerCourse.Where(p => p.CourseId == courseId).ToList();
-            if (del != null)
-            {
-                context.LecturerCourse.RemoveRange(del);
-                context.SaveChanges();
-            }
+            //var del = context.LecturerCourse.Where(p => p.CourseId == courseId).ToList();
+            //if (del != null)
+            //{
+            //    context.LecturerCourse.RemoveRange(del);
+            //    context.SaveChanges();
+            //}
             context.Course.Remove(st);
             SaveChanges();
         }
@@ -316,3 +319,4 @@ namespace DataAccess.EF
         }
     }
 }
+
