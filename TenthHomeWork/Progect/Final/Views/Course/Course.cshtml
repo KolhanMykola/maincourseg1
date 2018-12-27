@@ -1,0 +1,54 @@
+﻿
+@model IEnumerable<Models.Models.Course>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Courses List</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>@Html.ActionLink("Create new course", "Create")</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>StartDate</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.Name</td>
+                <td>@course.StartDate</td>
+                <td>
+                    @Html.ActionLink("edit Course", "Update", new { id = course.Id })|
+                    @Html.ActionLink("delete Course", "Delete", new { id = course.Id })|
+                    @Html.ActionLink("update/delete HomeTask", "UpdateHomeTask", "HomeTask", new { id = course.Id })|
+                    @Html.ActionLink("create HomeTask", "Create", "HomeTask", new { id = course.Id })|
+                    @Html.ActionLink("assignStudentToCourse   ", "Assign", "Assignment", new { id = course.Id })|
+                    @Html.ActionLink(" assignLectureToCourse", "Assign", "AssignLectureToCourse", new { id = course.Id })|
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

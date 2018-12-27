@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<Models.Models.HomeTaskAssessment>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StudentCourses List</title>
+</head>
+<body>
+
+    @foreach (var homeTaskAssessment in Model)
+    {
+        <form asp-action="UpdateHomeTaskAssessments">
+            <input type="hidden" asp-for="@homeTaskAssessment.Id" />
+
+            Title<input asp-for="@homeTaskAssessment.HomeTask.Title" readonly />
+            Description<input asp-for="@homeTaskAssessment.HomeTask.Description" readonly />
+            <input asp-for="@homeTaskAssessment.IsComplete" />
+            <p>
+                <input type="submit" value="Submit" style="width: 20%; height:40px" />
+            </p>
+        </form>
+    }
+</body>
+</html>

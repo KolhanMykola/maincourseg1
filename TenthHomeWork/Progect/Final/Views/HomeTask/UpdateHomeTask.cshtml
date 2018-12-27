@@ -1,0 +1,30 @@
+﻿
+@model Models.Models.HomeTask
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Action HomeTask</title>
+</head>
+<body>
+    <form asp-action="@ViewBag.Action">
+        <p>Date</p>
+        <input asp-for="Date" />
+        <p>Title</p>
+        <input asp-for="Title" />
+        <p>Description</p>
+        <input asp-for="Description" />
+        <p>Number</p>
+        <input asp-for="Number" />
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" value="@ViewBag.Id" />
+        <p>
+            <input type="submit" value="Submit" style="width: 20%; height:40px" />
+        </p>
+    </form>
+</body>
+</html>

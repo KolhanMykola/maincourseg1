@@ -1,0 +1,50 @@
+﻿
+@model IEnumerable<Models.Models.Lecturer>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lecture List</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>@Html.ActionLink("Create", "Create")</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>BirthDate</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var lecture in Model)
+        {
+            <tr>
+                <td>@lecture.Name</td>
+                <td>@lecture.BirthDate</td>
+                <td>
+                    @Html.ActionLink("edit", "UpdateLecture", new { id = lecture.Id })
+                    @Html.ActionLink("delete", "Delete", new { id = lecture.Id })
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿
+@model Models.Models.Student
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Action Student</title>
+</head>
+<body>
+    <form asp-action="@ViewBag.Action">
+        <p>Name</p>
+        <input asp-for="Name" />
+        <p>BirthDate</p>
+        <input asp-for="BirthDate" />
+        <p>Email</p>
+        <input asp-for="Email" />
+        <p>GitHubLink</p>
+        <input asp-for="GitHubLink" />
+        <p>Notes</p>
+        <input asp-for="Notes" />
+        <p>PhoneNumber</p>
+        <input asp-for="PhoneNumber" />
+        <input type="hidden" asp-for="Id" />
+        <p>
+            <input type="submit" value="Submit" style="width: 20%; height:40px" />
+        </p>
+    </form>
+</body>
+</html>

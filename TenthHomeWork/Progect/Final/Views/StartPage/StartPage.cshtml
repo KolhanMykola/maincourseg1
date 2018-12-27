@@ -1,0 +1,56 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>StartPage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+        }
+
+        .inside {
+            text-align: center;
+            width: 33%;
+        }
+
+            .inside a {
+                display: block;
+                height: 150px;
+            }
+
+        a.classStudent {
+            background: url(../Img/student.jpg) no-repeat 50% 50% / contain;
+        }
+
+        a.classLecture {
+            background: url(../Img/lecture.png) no-repeat 50% 50% / contain;
+        }
+
+        a.classCourse {
+            background: url(../Img/course.png) no-repeat 50% 50% / contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inside">@Html.ActionLink("", "Student", "Student", null, new { @class = "classStudent" })</div>
+        <div class="inside">@Html.ActionLink("", "Lecture", "Lecture", null, new { @class = "classLecture" })</div>
+        <div class="inside">@Html.ActionLink("", "Course", "Course", null, new { @class = "classCourse" })</div>
+    </div>
+</body>
+</html>
